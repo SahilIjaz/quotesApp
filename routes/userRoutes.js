@@ -19,7 +19,7 @@ router
 
 router
 .route('/forgotPassword')
-.get(authControllers.findUser)
+.post(authControllers.findUser)
 
 
 router

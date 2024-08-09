@@ -8,7 +8,6 @@ const quotesSchema=new mongoose.Schema({
     },
     time:{
         type:String,
-       default:'0'
     },
     days:{
         type:String,

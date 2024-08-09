@@ -91,15 +91,15 @@ console.log("AFTER CHECK")
 
 exports.remainder=catchAsync(async(req,res,next)=>{
     const remainders=await quote.find({
-        user:req.user._id,
-        remainder:' ',
-        time:'0'
+        user:req.user._id
     })
 
-if(!remainders)
+
+if(!remainders.time)
 {
     return next(new appError('No remainders to be shown!',404))
 }
+
 res.status(200).json({
     messaeg:'Your remeainders found !',
     status:200,

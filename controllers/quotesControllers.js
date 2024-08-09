@@ -96,7 +96,7 @@ exports.remainder=catchAsync(async(req,res,next)=>{
         time:'0'
     })
 
-if(remainders)
+if(!remainders)
 {
     return next(new appError('No remainders to be shown!',404))
 }

@@ -36,7 +36,7 @@ router
 
 router
 .route('/logIn')
-.get(authControllers.logIn)
+.post(authControllers.logIn)
 
 router.route('/logOut')
 .post(

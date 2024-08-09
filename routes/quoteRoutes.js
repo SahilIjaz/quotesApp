@@ -21,7 +21,7 @@ router
 
 router
 .route('/makeFavourite/:id')
-.put(
+.get(
   authControllers.protect,
   quoteController.favouriteQuote
 )

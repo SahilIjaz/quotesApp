@@ -13,7 +13,7 @@ router
 
 router
 .route('/getQuote')
-.put(
+.post(
   authControllers.protect,
    quoteController.getQuotesForToday
 )

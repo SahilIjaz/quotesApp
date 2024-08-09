@@ -24,7 +24,7 @@ router
 
 router
 .route('/verifyResetPassword')
-.get(authControllers.resetPassword)
+.post(authControllers.resetPassword)
 
 router
 .route('/resetPassword')

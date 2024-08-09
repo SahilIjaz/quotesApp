@@ -39,7 +39,7 @@ router
 .get(authControllers.logIn)
 
 router.route('/logOut')
-.get(
+.post(
     authControllers.protect,
     authControllers.logOut
 )

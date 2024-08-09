@@ -76,7 +76,8 @@ if(!newUser)
 }
     res.status(200).json({
         message:'user has been signed Up check your Emil for OTP ',
-        status:200
+        status:200,
+        otp
     })
 })
 
@@ -130,7 +131,8 @@ getUser.forgotPasswordOTP=otp
 await getUser.save()
 
 res.status(200).json({
-    message:'check your email'
+    message:'check your email',
+    otp
 })
    const message = `Use  ${otp} to complete forgot password.`
 console.log('NOW USER IS : ',getUser)

@@ -93,7 +93,7 @@ exports.remainder=catchAsync(async(req,res,next)=>{
     const remainders=await quote.find({
         user:req.user._id
     })
-if(!remainders||remainders.time==' '||remainders.days==' ')
+if(!remainders)
 {
     return next(new appError('No remainders to be shown!',404))
 }

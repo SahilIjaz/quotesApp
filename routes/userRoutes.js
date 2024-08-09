@@ -11,7 +11,7 @@ router
 
 router
 .route('/resendOTP')
-.get(authControllers.resendOTP)
+.post(authControllers.resendOTP)
 
 router
 .route('/verify')

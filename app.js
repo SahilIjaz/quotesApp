@@ -14,6 +14,6 @@ app.use('/api/v1/motivationApp',userRoutes)
 app.use('/api/v1/app/quotes',quoteRoutes)
 app.use('/api/v1/app/admin',adminRoutes)
 
-// app.use(globalErrorHandler)
+app.use(globalErrorHandler)
 
 module.exports=app

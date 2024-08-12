@@ -61,9 +61,9 @@ module.exports = (error, req, res, next) => {
   error.statusCode = error.statusCode || 500;
   error.message = error.message || "Internal Server Error";
   error.status = error.status || "error";
-  if (process.env.NODE_ENV === "development") {
-   devErrors(res, error);
- } else if (process.env.NODE_ENV === "production") {
+  // if (process.env.NODE_ENV === "development") {
+  //  devErrors(res, error);
+ //} else if (process.env.NODE_ENV === "production") {
     if (error.name === "TokenExpiredError") {
       error = tokenExpiredError(error);
     }
@@ -80,5 +80,5 @@ module.exports = (error, req, res, next) => {
       error = handleCastError(error);
     }
     prodErrors(res,error);
-}
+//}
 };

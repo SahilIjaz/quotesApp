@@ -32,7 +32,6 @@ res.status(500).json({
 })
 })
 
-
 exports.makeTerms=catchAsync(async(req,res,next)=>{
     const terms=await Term.create(req.body)
     if(!terms)
